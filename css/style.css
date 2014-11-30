@@ -1,0 +1,180 @@
+/* style.css
+Author: Khaleeq Ahmad     Date: November 2014
+General styling for the project. Included in index.html
+*/
+body{
+    background-color: rgb(85,85,85);
+    color:#ffffff;
+    width:1800px
+}
+.subunit.SCT { fill: #4682b4/*dodgerblue*/;}
+.subunit.WLS { fill: #e5c453 /*seagreen */; }
+.subunit.NIR { fill: #52d273/*gold*/; }
+.subunit.ENG { fill: #d71038 /*tomato*/; }
+.subunit.IRL { fill: #656565 /*lightgrey*/; }
+
+.subunit.SCT.active { fill: #689BC4/*dodgerblue*/;}
+.subunit.WLS.active { fill: #ECD27E /*seagreen */; }
+.subunit.NIR.active { fill: #79DC92/*gold*/; }
+.subunit.ENG.active { fill: #EF2A51 /*tomato*/; }
+
+
+.place,
+.place-label {
+    fill: #dedede;
+}
+
+.tooltip, .tooltipFull, .infoPanel{
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5px 10px;
+    /*border-radius: 10px;*/
+    min-width: 250px;
+    font-size:11px;
+}
+
+.tooltipFull, .infoPanel{
+    background-color: black;
+}
+
+.tooltip h4, .tooltipFull h4, .infoPanel h4{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.8);
+}
+
+
+p, text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 6px;
+    pointer-events: none;
+    text-transform: uppercase;
+    padding: 2px;
+}
+
+/*.tooltip ul li, .tooltipFull ul li{*/
+/*list-style-type: none;*/
+/*text-align: justify;*/
+/*font-size: 10px;*/
+/*}*/
+
+
+.tooltip
+{
+    position: absolute;
+    z-index: 11;
+
+}
+.tooltipFull, .infoPanel
+{
+    position: absolute;
+    top: 100px;
+    left:530px;
+    z-index: 10;
+
+
+}
+
+.tooltipFull dl dt, .infoPanel dl dt
+{
+
+    float:left;
+    font-weight:bold;
+    margin-right:10px;
+    padding:5px;
+    width:60px;
+    clear: left;
+    text-align: left;
+    color: #d71038;
+    text-transform: uppercase;
+}
+
+.tooltipFull dl dt:after, .infoPanel dl dt:after {
+    content: ": "
+}
+
+.tooltipFull dl dd, .infoPanel dl dd
+{
+    margin:2px 0;
+    padding:5px 2px;
+    text-align: right;
+    width: 100%;
+
+}
+
+.tooltipFull dd, .infoPanel dd
+{
+    border-bottom: dotted 1px #4682b4;
+
+}
+
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+.subunit {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.subunit.active {
+    /*opacity: 0.4;*/
+    /*outline: 3px;*/
+}
+
+
+.mesh {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: #4682b4;
+    /*stroke: #4682b4;*/
+    /*stroke-width: 0.5px;*/
+}
+
+.node {
+    font: 10px sans-serif;
+    color: white;
+}
+
+.link {
+    fill: none;
+    stroke: #d71038;
+    stroke-width: 1.5px;
+}
+
+.node-text{
+    font-size: 10px;
+    fill: white;
+}
+
+#orgBubbleSelect{
+    float: left;
+}
+
+#zoom-map{
+    float: left;
+}
+
+#radial-tree{
+    float: left;
+}
+
+#nobutton{
+    visibility: hidden;
+}
+
+
+

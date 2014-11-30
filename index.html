@@ -1,0 +1,62 @@
+<!--
+Author: Khaleeq Ahmad     Date: November 2014
+Index file for the project.
+-Takes live data from JSON to be formatted hierchially (set-data.js)
+-Creates a zoomable bubble map (zoom-map.js) with tooltips and . Bubbles are set from selection box Jquery function in this file.
+-Creates a radial tree using the hierchial version of data. Nodes can be expanded and hovered for full tooltips for info on orgs/grants/investigators (radial-tree.js).
+-->
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+    //                function getOrgBubbleValue(sel) {
+    //                    alert(sel.value);
+    //                }
+
+/////////////////////////// JQuery function called to set Bubble Map selector
+    $(document).ready(function() {
+        $("#orgBubbleSelect").on('change', function () {
+//            if (this.value == "grants")
+//                orgPinsByGrants();
+////            alert("a");
+//            else if (this.value == "persons")
+//                orgPinsByPersons();
+////                alert("b");
+//            else
+//            sortOrgPins(this.value);
+//            orgPinsBy(this.value);
+            setOrgBubble(this.value);
+//            console.log(this.value);
+
+        });
+    });
+</script>
+
+<body>
+
+
+<!--Selector for Bubble Map options-->
+<div id="map-col" class="col">
+    <select name="orgBubbleSelect" id="orgBubbleSelect" >
+        <!--onchange="getOrgBubbleValue()"-->
+        <option value="" disabled selected>--Bubble Map Options--</option>
+        <option value="reset">Reset to Pins</option>
+        <option value="grants">Number of Grants</option>
+    </select>
+    <button id="nobutton" type="button"></button>
+
+
+   <!-- Include Zoomable Map script-->
+    <script src="js/zoom-map.js"></script>
+
+</div>
+
+<!--Include Radial Tree script-->
+<script src="js/radial-tree.js"></script>
+<script src="js/set-data.js"></script>
+
+
